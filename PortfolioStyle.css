@@ -820,11 +820,12 @@ body.modal-open{ overflow:hidden; }   /* pagina scrolt niet mee */
   nav.links{
     flex-basis:100%; flex-direction:column; gap:0;
     max-height:0; overflow:hidden; transition:max-height .4s var(--zacht);
+  }
       /* contactpagina onder elkaar */
   .contact-pagina{ grid-template-columns:1fr; }
   .veld-rij{ grid-template-columns:1fr; }
-  .contact-form{ padding:24px; };
-  }
+  .contact-form{ padding:24px; }
+  
   .menu-open nav.links{ max-height:300px; }
   nav.links a{ padding:12px 0; font-size:17px; border-top:1px solid rgba(253,251,245,.15); }
   nav.links a::after{ display:none; }

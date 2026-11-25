@@ -97,4 +97,37 @@
   icoon.rel = 'icon';
   icoon.href = 'Afbeeldingen\\logos\\veer-en-vorm-logo-svg\\veer-en-vorm-icoon-02-negatief.svg';
   document.head.append(icoon);
+  
+})();
+
+/* ============================================================
+   CONTACTFORMULIER – verstuurt via Formspree zonder de pagina
+   te verlaten en laat een bedankje zien.
+   ============================================================ */
+(function () {
+  const form = document.querySelector('.contact-form');
+  if (!form) return;
+  const melding = form.querySelector('.form-melding');
+  const knop = form.querySelector('button[type="submit"]');
+
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    knop.disabled = true;
+    melding.classList.remove('fout');
+    melding.textContent = 'Bezig met versturen...';
+    try {
+      const antwoord = await fetch(form.action, {
+        method: 'POST',
+        body: new FormData(form),
+        headers: { 'Accept': 'application/json' }
+      });
+      if (!antwoord.ok) throw new Error();
+      form.reset();
+      melding.textContent = 'Bedankt voor je bericht! Ik neem snel contact met je op.';
+    } catch {
+      melding.classList.add('fout');
+      melding.textContent = 'Er ging iets mis. Mail me gerust direct: veerle.zwart@gmail.com';
+    }
+    knop.disabled = false;
+  });
 })();

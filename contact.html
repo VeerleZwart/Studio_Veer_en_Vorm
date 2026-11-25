@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Contact — Veerle Zwart</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="PortfolioStyle.css">
+	<script>document.documentElement.classList.add('js');</script>
+</head>
+<body>
+
+<!-- ============ MENU ============ -->
+<header class="nav">
+  <a class="logo" href="index.html"data-logo="Afbeeldingen/logos/veer-en-vorm-logo-svg/veer-en-vorm-logo-02-negatief.svg" aria-label="Veerle Zwart, naar home">
+    <span class="name">Veerle Zwart</span>
+    <span class="sub">portfolio</span>
+  </a>
+  <button class="menu-knop" type="button" aria-label="Menu openen" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+  <nav class="links">
+    <a href="index.html#over-mij">Over mij</a>
+    <a href="projecten.html" >Projecten</a>
+    <a href="index.html#ervaringen">Ervaringen</a>
+    <a href="index.html#contact" class="active" aria-current="page">Contact</a>
+  </nav>
+</header>
+
+<!-- ============ KOP ============ -->
+<section class="pagina-kop">
+  <a class="terug" href="index.html">&larr; Terug naar home</a>
+  <p class="eyebrow">Contact</p>
+  <h1>Zin om samen iets te maken?</h1>
+  <p class="intro">Heb je een vraag, een opdracht of wil je een rapport van een van mijn projecten inzien? Stuur me een berichtje via het formulier of neem direct contact op. Ik reageer meestal binnen twee werkdagen.</p>
+</section>
+
+<!-- ============ GEGEVENS + FORMULIER ============ -->
+<section class="contact-pagina">
+
+  <!-- Links: mijn gegevens -->
+  <div class="contact-gegevens reveal">
+    <h2>Mijn gegevens</h2>
+    <a class="gegeven" href="mailto:veerle.zwart@gmail.com">
+      <span class="label">E-mail</span>
+      <span class="value">veerle.zwart@gmail.com</span>
+    </a>
+    <a class="gegeven" href="tel:+31615648652">
+      <span class="label">Telefoon</span>
+      <span class="value">+31 6 15 64 86 52</span>
+    </a>
+    <a class="gegeven" href="https://www.linkedin.com/in/veerle-zwart-923246385" target="_blank" rel="noopener">
+      <span class="label">LinkedIn</span>
+      <span class="value">Veerle Zwart</span>
+    </a>
+    <div class="gegeven">
+      <span class="label">Locatie</span>
+      <span class="value">Breda (NL) &amp; Gent (BE)</span>
+    </div>
+  </div>
+
+  <!-- Rechts: contactformulier -->
+  <!-- Formulier verstuurt via Formspree naar je mail -->
+  <form class="contact-form reveal" action="https://formspree.io/f/mrpqjorp" method="POST">
+    <h2>Contactformulier</h2>
+    <p class="verplicht">* Verplicht veld</p>
+
+    <div class="veld-rij">
+      <label class="veld">
+        <span>Voornaam *</span>
+        <input type="text" name="voornaam" autocomplete="given-name" required>
+      </label>
+      <label class="veld">
+        <span>Achternaam</span>
+        <input type="text" name="achternaam" autocomplete="family-name">
+      </label>
+    </div>
+
+    <label class="veld">
+      <span>E-mail *</span>
+      <input type="email" name="email" autocomplete="email" required>
+    </label>
+
+    <label class="veld">
+      <span>Telefoonnummer</span>
+      <input type="tel" name="telefoon" autocomplete="tel">
+    </label>
+
+    <label class="veld">
+      <span>Bericht *</span>
+      <textarea name="bericht" rows="6" required></textarea>
+    </label>
+
+    <!-- onderwerp van de mail die jij krijgt -->
+    <input type="hidden" name="_subject" value="Nieuw bericht via je portfolio">
+
+    <button class="knop" type="submit">Verstuur bericht <span class="pijl" aria-hidden="true">&rarr;</span></button>
+    <p class="form-melding" aria-live="polite"></p>
+  </form>
+
+</section>
+
+<footer>© Veerle Zwart — persoonlijk portfolio <a class="naar-boven" href="#">Naar boven &uarr;</a></footer>
+
+<script src="projecten.js"></script>
+<script src="beweging.js"></script>
+
+</body>
+</html>

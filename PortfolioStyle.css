@@ -638,6 +638,53 @@ a.contact-item:hover{ background:rgba(253,251,245,.16); border-color:var(--zalmr
 }
 .contact-item .value{ font-size:15px; font-weight:500; overflow-wrap:anywhere; }
 
+/* ---- Contactpagina (contact.html) ---- */
+.contact-pagina{
+  display:grid; grid-template-columns:1fr 1.4fr;
+  gap:40px; align-items:start;
+}
+.contact-pagina > *{ min-width:0; }
+.contact-pagina h2{ margin-bottom:20px; }
+
+/* gegevens links */
+.contact-gegevens{ display:flex; flex-direction:column; gap:14px; }
+.gegeven{
+  display:flex; flex-direction:column; gap:4px;
+  padding:18px 22px; border-radius:16px; text-decoration:none;
+  background:var(--paper); color:var(--ink);
+  border-left:3px solid var(--zalmroze);
+  transition:transform .3s var(--zacht), box-shadow .3s;
+}
+a.gegeven:hover{ transform:translateX(6px); box-shadow:0 10px 24px rgba(30,36,22,.10); }
+.gegeven .label{
+  font-size:11px; letter-spacing:0.14em; text-transform:uppercase;
+  color:var(--olive); font-weight:600;
+}
+.gegeven .value{ font-size:15px; font-weight:500; color:var(--olive-dark); overflow-wrap:anywhere; }
+
+/* formulier rechts */
+.contact-form{
+  background:var(--paper); border-radius:var(--radius);
+  padding:34px; box-shadow:0 14px 40px rgba(30,36,22,.08);
+  display:flex; flex-direction:column; gap:16px;
+}
+.contact-form h2{ margin-bottom:0; }
+.verplicht{ font-size:12px; color:var(--ink-soft); margin:-8px 0 4px; }
+.veld-rij{ display:grid; grid-template-columns:1fr 1fr; gap:16px; }
+.veld{ display:flex; flex-direction:column; gap:6px; }
+.veld span{ font-size:13px; font-weight:600; color:var(--olive-dark); }
+.veld input,
+.veld textarea{
+  font-family:'Poppins', sans-serif; font-size:15px; color:var(--ink);
+  background:var(--cream); border:2px solid transparent; border-radius:12px;
+  padding:12px 14px; transition:border-color .25s, background .25s;
+}
+.veld textarea{ resize:vertical; min-height:140px; }
+.veld input:focus,
+.veld textarea:focus{ outline:none; border-color:var(--olive); background:var(--white); }
+.contact-form .knop{ align-self:flex-start; cursor:pointer; font-family:'Poppins', sans-serif; }
+.form-melding{ margin:0; font-size:14px; font-weight:500; color:var(--olive-dark); }
+.form-melding.fout{ color:#A3303F; }
 
 /* ================================================================
    == 13. Footer
@@ -773,6 +820,10 @@ body.modal-open{ overflow:hidden; }   /* pagina scrolt niet mee */
   nav.links{
     flex-basis:100%; flex-direction:column; gap:0;
     max-height:0; overflow:hidden; transition:max-height .4s var(--zacht);
+      /* contactpagina onder elkaar */
+  .contact-pagina{ grid-template-columns:1fr; }
+  .veld-rij{ grid-template-columns:1fr; }
+  .contact-form{ padding:24px; };
   }
   .menu-open nav.links{ max-height:300px; }
   nav.links a{ padding:12px 0; font-size:17px; border-top:1px solid rgba(253,251,245,.15); }

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Projecten — Veerle Zwart</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="PortfolioStyle.css">
+	<script>document.documentElement.classList.add('js');</script>
+</head>
+<body>
+
+<!-- ============ MENU ============ -->
+<header class="nav">
+  <a class="logo" href="index.html"data-logo="Afbeeldingen/logos/veer-en-vorm-logo-svg/veer-en-vorm-logo-02-negatief.svg" aria-label="Veerle Zwart, naar home">
+    <span class="name">Veerle Zwart</span>
+    <span class="sub">portfolio</span>
+  </a>
+  <button class="menu-knop" type="button" aria-label="Menu openen" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+  <nav class="links">
+    <a href="index.html#over-mij">Over mij</a>
+    <a href="projecten.html" class="active" aria-current="page">Projecten</a>
+    <a href="index.html#ervaringen">Ervaringen</a>
+    <a href="index.html#contact">Contact</a>
+  </nav>
+</header>
+
+<!-- ============ KOP ============ -->
+<section class="pagina-kop">
+  <a class="terug" href="index.html">&larr; Terug naar home</a>
+  <p class="eyebrow">Portfolio</p>
+  <h1>Alle projecten</h1>
+  <p class="intro">Van communicatieadvies tot poster en collage: hier staat alles wat ik ontworpen, onderzocht en gemaakt heb. Klik op een project voor het hele verhaal, met foto's van het proces.</p>
+</section>
+
+<!-- ============ FILTER + OVERZICHT ============ -->
+<section class="overzicht">
+  <!-- De filterknoppen en kaartjes worden automatisch gemaakt uit projecten.js -->
+  <div class="filters" role="group" aria-label="Filter op soort project"></div>
+  <p class="aantal" aria-live="polite"></p>
+  <div class="projecten-grid" data-projecten="grid"></div>
+</section>
+
+<!-- ============ OPROEP ============ -->
+<section class="oproep">
+  <div class="reveal">
+    <p class="eyebrow">Benieuwd naar meer?</p>
+    <h2>Laten we samen iets zichtbaar maken.</h2>
+    <a class="knop" href="index.html#contact">Neem contact op <span class="pijl" aria-hidden="true">&rarr;</span></a>
+  </div>
+</section>
+
+<footer>© Veerle Zwart — persoonlijk portfolio <a class="naar-boven" href="#">Naar boven &uarr;</a></footer>
+
+<script src="projecten.js"></script>
+<script src="beweging.js"></script>
+
+</body>
+</html>

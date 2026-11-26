@@ -20,7 +20,7 @@ const PROJECTEN = {
     uitgelicht: true,
     kaartTitel: 'Poster StickIt: Samen kijken we omhoog',
     kaartTekst: 'Eventposter voor de Student Challenge van Graphic Matters over de zonsverduistering van 12 augustus 2026, toen iedereen samen omhoog keek.',
-    kaartFoto: 'poster-mockup-straat.jpg',
+    kaartFoto: '08 Poster/poster-mockup-straat.jpg',
     fotoPositie: 'center 30%',
     meta: [
       ['Opleiding', 'CrossMedia Design · Artevelde Hogeschool'],
@@ -37,15 +37,15 @@ const PROJECTEN = {
       ['Het ontwerp', 'De poster werkt vooral met pathos: je moet het gevoel van dat moment terugkrijgen. De grote donkere vorm is de schaduw van de verduistering die over iedereen valt. Elke figuur heeft een eigen felle kleur, als teken dat iedereen erbij hoort, en het enige detail is het witte eclipsbrilletje. Een warme sepia-achtergrond en papiertextuur maken de poster tastbaar, als een herinnering uit een fotoalbum.']
     ],
     tags: ['Poster', 'Graphic Matters', 'Beeldtaal', 'A0'],
-    fotos: [
-      ['poster-samen-omhoog.jpg', 'Eindresultaat: ‘Samen kijken we omhoog’, Breda 12 | 08 | 2026'],
-      ['poster-mockup-straat.jpg', 'Mock-up: de poster op straat'],
-      ['poster-mockup-gang.jpg', 'Mock-up: de poster in een gang'],
-      ['poster-moodboard.jpg', 'Moodboard: sepia, regenboog en papiertextuur'],
-      ['poster-inspiratie.jpg', 'Inspiration board'],
-      ['poster-ideeschetsen.jpg', 'Ideeschetsen: de eerste, te letterlijke richtingen'],
-      ['poster-voorstudie.jpg', 'Voorstudie: silhouetten en compositie'],
-      ['poster-doorgedreven-studie.jpg', 'Doorgedreven studie: drie versies naast elkaar']
+        fotos: [
+      ['08 Poster/poster-samen-omhoog.jpg', 'Eindresultaat: ‘Samen kijken we omhoog’, Breda 12 | 08 | 2026'],
+      ['08 Poster/poster-mockup-straat.jpg', 'Mock-up: de poster op straat'],
+      ['08 Poster/poster-mockup-gang.jpg', 'Mock-up: de poster in een gang'],
+      ['08 Poster/poster-moodboard.jpg', 'Moodboard: sepia, regenboog en papiertextuur'],
+      ['08 Poster/poster-inspiratie.jpg', 'Inspiration board'],
+      ['08 Poster/poster-ideeschetsen.jpg', 'Ideeschetsen: de eerste, te letterlijke richtingen'],
+      ['08 Poster/poster-voorstudie.jpg', 'Voorstudie: silhouetten en compositie'],
+      ['08 Poster/poster-doorgedreven-studie.jpg', 'Doorgedreven studie: drie versies naast elkaar']
     ],
     bestanden: [
       ['Vraag het dossier aan', 'mailto:veerle.zwart@gmail.com?subject=Dossier%20StickIt%20aanvragen']
@@ -60,7 +60,7 @@ const PROJECTEN = {
     uitgelicht: true,
     kaartTitel: 'Collage: Today. In 10 years.',
     kaartTekst: 'Een collage over mijn leven in 2036: een wolk van gescheurde reisbeelden boven iemand die met open armen de wereld in kijkt.',
-    kaartFoto: 'mockup-collage.png',
+    kaartFoto: '07 Collage/mockup-collage.png',
     meta: [
       ['Opleiding', 'CrossMedia Design · Artevelde Hogeschool'],
       ['Vak', 'Graphic Design 1 · opdracht 1'],
@@ -75,9 +75,9 @@ const PROJECTEN = {
     ],
     tags: ['Collage', 'Knip- en plakwerk', 'Beeldend vertellen', 'A3'],
     fotos: [
-      ['mockup-collage.png', 'Mock-up: de collage ingelijst'],
-      ['collage-mockup.jpg', 'Mock-up: de collage ingelijst'],
-      ['collage-2036.jpg', 'De collage ‘Today. In 10 years.’']
+      ['07 Collage/collage-2036.jpg', 'De collage: Today. In 10 years. 2036'],
+      ['07 Collage/collage-mockup.jpg', 'Mock-up: de collage in een lijst'],
+      ['07 Collage/mockup-collage.png', 'Mock-up van de collage']
     ],
   }
     ,
@@ -88,7 +88,7 @@ const PROJECTEN = {
     uitgelicht: true,
     kaartTitel: 'Doelgroepanalyse TURF',
     kaartTekst: 'Onderzoek voor festival TURF in Breda: hoe bereik en enthousiasmeer je studenten? Met deskresearch, zes interviews, een persona en een customer journey.',
-    kaartFoto: 'turf-cover.jpg',
+    kaartFoto: '06 Turf/turf-cover.jpg',
     fotoPositie: 'center 70%',
     titel: 'Omgevings- en doelgroepanalyse TURF',
     ondertitel: 'Onderzoeksrapport · Stichting TURF',
@@ -106,10 +106,10 @@ const PROJECTEN = {
     ],
     tags: ['Onderzoek', 'Doelgroepanalyse', 'Persona', 'Customer journey'],
     fotos: [
-      ['turf-cover.jpg', 'Voorkant van het onderzoeksrapport'],
-      ['turf-persona.jpg', 'Persona Lara, gebaseerd op zes interviews'],
-      ['turf-customer-journey.jpg', 'Customer journey: van bewustwording tot loyaliteit'],
-      ['turf-positioneringsmatrix.jpg', 'Positioneringsmatrix: TURF tegenover het Bredase uitgaansaanbod']
+      ['06 Turf/turf-cover.jpg', 'Voorkant van het onderzoeksrapport'],
+      ['06 Turf/turf-persona.jpg', 'Persona Lara, gebaseerd op zes interviews'],
+      ['06 Turf/turf-customer-journey.jpg', 'Customer journey: van bewustwording tot loyaliteit'],
+      ['06 Turf/turf-positioneringsmatrix.jpg', 'Positioneringsmatrix: TURF tegenover het Bredase uitgaansaanbod']
     ],
     bestanden: [
       ['Bekijk rapport (PDF)', 'bestanden/Doelgroepanalyse-TURF-Veerle-Zwart.pdf']
@@ -123,7 +123,7 @@ const PROJECTEN = {
     uitgelicht: true,
     kaartTitel: 'WorkWalk: Stop sitting, start walking',
     kaartTekst: 'Gedragsinterventie voor Tilburg University: een kartonnen boompje op de vergadertafel dat medewerkers verleidt om wandelend te vergaderen.',
-    kaartFoto: 'workwalk-mockup.png',
+    kaartFoto: '04 Workwalk/workwalk-mockup.png',
     titel: 'WorkWalk',
     ondertitel: 'Gedragsverandering · Tilburg University',
     meta: [
@@ -140,14 +140,22 @@ const PROJECTEN = {
       ['Het resultaat', 'Een printklaar ontwerp met een stappenplan voor de invoering: 50 boompjes, verspreid door 32 ambassadeurs en elke twee weken gewisseld tussen de vergaderzalen.']
     ],
     tags: ['Gedragsverandering', 'Interventie', 'Testen', 'Printontwerp'],
-        fotos: [
-      ['workwalk-mockup.png', 'Een boompje dat de gewoonte doorbreekt'],
-      ['workwalk-1.jpg', 'Een boompje dat de gewoonte doorbreekt'],
-      ['workwalk-visualisatie.png', 'Het boompje: alle vier de kanten'],
-      ['workwalk-3.jpg', 'Het boompje in de vergaderzaal'],
-      ['workwalk-4.jpg', 'De gedragsketen van vijf interventies'],
-      ['workwalk-5.jpg', 'Opties voor het WorkWalk-logo'],
-      ['workwalk-loop.png', 'Verantwoordingsverslag WorkWalk · LOOP']
+    fotos: [
+      ['04 Workwalk/workwalk-mockup.png', 'Mock-up van Workwalk'],
+      ['04 Workwalk/workwalk-1.jpg', 'Uit het project'],
+      ['04 Workwalk/workwalk-2.jpg', 'Uit het project'],
+      ['04 Workwalk/workwalk-5.jpg', 'Uit het project'],
+      ['04 Workwalk/workwalk-interventiepakket_Pagina_01.png', 'Interventiepakket, voorkant'],
+      ['04 Workwalk/workwalk-interventiepakket_Pagina_02.png', 'Uit het interventiepakket'],
+      ['04 Workwalk/workwalk-interventiepakket_Pagina_04.png', 'Uit het interventiepakket'],
+      ['04 Workwalk/workwalk-interventiepakket_Pagina_12.png', 'Uit het interventiepakket'],
+      ['04 Workwalk/workwalk-interventiepakket_Pagina_13.png', 'Uit het interventiepakket'],
+      ['04 Workwalk/workwalk-rapport_Pagina_01.png', 'Voorkant van het rapport'],
+      ['04 Workwalk/workwalk-rapport_Pagina_04.png', 'Uit het rapport'],
+      ['04 Workwalk/workwalk-rapport_Pagina_05.png', 'Uit het rapport'],
+      ['04 Workwalk/workwalk-rapport_Pagina_12.png', 'Uit het rapport'],
+      ['04 Workwalk/workwalk-rapport_Pagina_13.png', 'Uit het rapport'],
+      ['04 Workwalk/workwalk-rapport_Pagina_27.png', 'Uit het rapport']
     ],
     bestanden: [
       ['Vraag het verslag aan', 'mailto:veerle.zwart@gmail.com?subject=Verslag%20WorkWalk%20aanvragen']
@@ -161,7 +169,7 @@ const PROJECTEN = {
     uitgelicht: true,
     kaartTitel: 'Netwerkkracht Lorenz',
     kaartTekst: 'MarCom-advies voor Netwerkkracht Start: positionering en een middelenmix van LinkedIn-campagne, drieluikfolder en aanwezigheid op ZZP-beurzen.',
-    kaartFoto: 'FotoLorenz1.png',
+    kaartFoto: '03 Lorenz/FotoLorenz1.png',
     titel: 'Netwerkkracht Lorenz',
     ondertitel: 'MarCom-advies · Netwerkkracht Start',
     meta: [
@@ -176,13 +184,22 @@ const PROJECTEN = {
 ['Het resultaat', 'Een MarCom-advies met het concept “Een netwerk om op te bouwen” en de belofte dat het platform samenwerken simpeler en sneller maakt. Met een LinkedIn-campagne met korte video, een drieluikfolder en een stand op de Dag van de ZZP’er willen we 1500 professionals bereiken en 45 aanmeldingen voor de gratis proefmaand halen.']
     ],
     tags: ['MarCom', 'LinkedIn campagne', 'Conceptontwikkeling'],
-        fotos: [
-      ['FotoLorenz1.png', 'Netwerkkracht Lorenz'],
-      ['lorenz-1.jpg', 'Slidedeck: Een netwerk om op te bouwen'],
-      ['lorenz-2.jpg', 'Het concept'],
-      ['lorenz-3.jpg', 'LinkedIn-campagne'],
-      ['lorenz-4.jpg', 'Drieluikfolder'],
-      ['lorenz-5.jpg', 'Stand op de Dag van de ZZP’er']      
+    fotos: [
+      ['03 Lorenz/FotoLorenz1.png', 'Netwerkkracht Lorenz'],
+      ['03 Lorenz/lorenz-1.PNG', 'Uit het project'],
+      ['03 Lorenz/lorenz-3.jpg', 'Uit het project'],
+      ['03 Lorenz/lorenz-4.jpg', 'Uit het project'],
+      ['03 Lorenz/lorenz-5.jpg', 'Uit het project'],
+      ['03 Lorenz/lorenz-buyer-persona.png', 'Buyer persona'],
+      ['03 Lorenz/lorenz-customer-journey.png', 'Customer journey'],
+      ['03 Lorenz/lorenz-rapport_Pagina_01.png', 'Voorkant van het rapport'],
+      ['03 Lorenz/lorenz-rapport_Pagina_03.png', 'Uit het rapport'],
+      ['03 Lorenz/lorenz-rapport_Pagina_04.png', 'Uit het rapport'],
+      ['03 Lorenz/lorenz-rapport_Pagina_12.png', 'Uit het rapport'],
+      ['03 Lorenz/lorenz-rapport_Pagina_13.png', 'Uit het rapport'],
+      ['03 Lorenz/lorenz-slidedeck (4).PNG', 'Slide uit de presentatie'],
+      ['03 Lorenz/lorenz-slidedeck (9).PNG', 'Slide uit de presentatie'],
+      ['03 Lorenz/lorenz-slidedeck (19).PNG', 'Slide uit de presentatie']
     ],
     bestanden: [
       ['Vraag het rapport aan', 'mailto:veerle.zwart@gmail.com?subject=Rapport%20Lorenz%20aanvragen']
@@ -195,7 +212,7 @@ const PROJECTEN = {
     uitgelicht: true,
     kaartTitel: 'Samen maken wij Heusdenhout',
     kaartTekst: 'Communicatieadvies voor Wijkraad Heusdenhout: onderzoek naar bekendheid en betrokkenheid, uitgewerkt tot een wijkkrant, poster en vernieuwde website.',
-    kaartFoto: 'FotoHeusdenhout.png',
+    kaartFoto: '02 Heusdenhout/FotoHeusdenhout.png',
     titel: 'Samen maken wij Heusdenhout',
     ondertitel: 'Adviesrapport · Wijkraad Heusdenhout',
     meta: [
@@ -213,11 +230,17 @@ const PROJECTEN = {
     ],
     tags: ['Praatstof', 'Adviesrapport', 'Communicatiemiddelen'],
     fotos: [
-      ['heusdenhout-1.jpg', 'Voorkant adviesrapport Samen maken wij Heusdenhout'],
-      ['heusdenhout-2.jpg', 'Poster voor de wijkraad'],
-      ['heusdenhout-3.jpg', 'Vernieuwde website en wijkkrant'],
-      ['heusdenhout-4.jpg', 'Customer journey van de doelgroep'],
-      ['FotoHeusdenhout.png', 'Samen maken wij Heusdenhout']
+      ['02 Heusdenhout/FotoHeusdenhout.png', 'Samen maken wij Heusdenhout'],
+      ['02 Heusdenhout/wijkraad-krant-1.png', 'Wijkkrant, voorkant'],
+      ['02 Heusdenhout/wijkraad-krant-2.png', 'Wijkkrant, binnenkant'],
+      ['02 Heusdenhout/wijkraad-poster.png', 'Poster voor de wijk'],
+      ['02 Heusdenhout/heusdenhout-1.jpg', 'Uit het project'],
+      ['02 Heusdenhout/heusdenhout-adviesposter.png', 'Adviesposter'],
+      ['02 Heusdenhout/heusdenhout-buyer-persona.png', 'Buyer persona'],
+      ['02 Heusdenhout/wijkraad-customer-journey.png', 'Customer journey'],
+      ['02 Heusdenhout/heusdenhout-rapport_Pagina_03.png', 'Uit het adviesrapport'],
+      ['02 Heusdenhout/heusdenhout-rapport_Pagina_04.png', 'Uit het adviesrapport'],
+      ['02 Heusdenhout/heusdenhout-rapport_Pagina_13.png', 'Uit het adviesrapport']
     ],
     bestanden: [
       ['Vraag het rapport aan', 'mailto:veerle.zwart@gmail.com?subject=Rapport%20Heusdenhout%20aanvragen']
@@ -230,7 +253,7 @@ const PROJECTEN = {
     uitgelicht: true,
     kaartTitel: 'Huisstijlhandboek Praatstof',
     kaartTekst: 'Eigen huisstijl voor communicatiebureau Praatstof: logo, kleuren, typografie en toepassingen zoals visitekaartje en briefsjabloon.',
-    kaartFoto: 'HuisstijlPS.png',
+    kaartFoto: '01 Praatstof/praatstof-mockup.png',
     titel: 'Huisstijlhandboek Praatstof',
     ondertitel: 'Huisstijl · Communicatiebureau Praatstof',
     meta: [
@@ -245,8 +268,22 @@ const PROJECTEN = {
     ],
     tags: ['Huisstijl', 'Branding', 'Vormgeving'],
     fotos: [
-      ['HuisstijlPS.png', 'Huisstijlhandboek Praatstof']
-
+      ['01 Praatstof/praatstof-mockup.png', 'Mock-up van de huisstijl'],
+      ['01 Praatstof/praatstof-foto (1).jpg', 'Huisstijl in gebruik'],
+      ['01 Praatstof/praatstof-foto (2).jpg', 'Huisstijl in gebruik'],
+      ['01 Praatstof/praatstof-instagram.jpeg', 'Instagram in de Praatstof-huisstijl'],
+      ['01 Praatstof/praatstof-foto (3).jpg', 'Huisstijl in gebruik'],
+      ['01 Praatstof/praatstof-foto (4).jpg', 'Huisstijl in gebruik'],
+      ['01 Praatstof/praatstof-foto (5).jpg', 'Huisstijl in gebruik'],
+      ['01 Praatstof/praatstof-handboek- (1).jpg', 'Uit het huisstijlhandboek'],
+      ['01 Praatstof/praatstof-handboek- (2).jpg', 'Uit het huisstijlhandboek'],
+      ['01 Praatstof/praatstof-handboek- (2).png', 'Uit het huisstijlhandboek'],
+      ['01 Praatstof/praatstof-handboek- (3).jpg', 'Uit het huisstijlhandboek'],
+      ['01 Praatstof/praatstof-handboek- (3).png', 'Uit het huisstijlhandboek'],
+      ['01 Praatstof/praatstof-handboek- (4).png', 'Uit het huisstijlhandboek'],
+      ['01 Praatstof/praatstof-handboek- (5).jpg', 'Uit het huisstijlhandboek'],
+      ['01 Praatstof/praatstof-handboek- (6).jpg', 'Uit het huisstijlhandboek'],
+      ['01 Praatstof/praatstof-handboek- (8).png', 'Uit het huisstijlhandboek']
     ],
     bestanden: [
       ['Vraag het handboek aan', 'mailto:veerle.zwart@gmail.com?subject=Huisstijlhandboek%20Praatstof%20aanvragen']
@@ -261,7 +298,7 @@ const PROJECTEN = {
     uitgelicht: false,
     kaartTitel: 'Portfolio Professionele Identiteit',
     kaartTekst: 'Wie ben ik als professional? Mijn kernkwaliteiten, leerstijl, teamrol en ontmoetingen met het werkveld, van snuffelstage tot expertinterview.',
-    kaartFoto: 'pi-portfolio.jpg',
+    kaartFoto: '05 PI/pi-portfolio.jpg',
     titel: 'Portfolio Professionele Identiteit',
     ondertitel: 'Propedeuse Communicatie · Avans Hogeschool',
     meta: [
@@ -278,10 +315,12 @@ const PROJECTEN = {
 ['Wat het me opleverde', 'Ik ontdekte dat ik het meest tot mijn recht kom waar communicatie en vormgeving samenkomen. Daarom koos ik na mijn propedeuse voor CrossMedia Design aan Artevelde Hogeschool.']
     ],
     tags: ['Zelfreflectie', 'Werkveldoriëntatie', 'Teamrollen', 'Kernkwaliteiten'],
-        fotos: [
-      ['pi-portfolio.jpg', 'Voorkant portfolio Professionele Identiteit'],
-      ['pi-portfolio-2.jpg', 'Kernkwadrant van Ofman: optimistisch'],
-      ['pi-portfolio-3.jpg', 'Werkveldoriëntatie bij Beeld & Geluid']
+    fotos: [
+      ['05 PI/pi-portfolio.jpg', 'Portfolio Professionele identiteit'],
+      ['05 PI/pi-portfolio-2.jpg', 'Uit het portfolio'],
+      ['05 PI/pi-portfolio-3.jpg', 'Uit het portfolio'],
+      ['05 PI/portfolio-rapport_Pagina_07_Afbeelding_0003.png', 'Uit het portfolio'],
+      ['05 PI/portfolio-rapport_Pagina_21_Afbeelding_0002.png', 'Uit het portfolio']
     ],
     bestanden: [
       ['Vraag het portfolio aan', 'mailto:veerle.zwart@gmail.com?subject=PI-portfolio%20aanvragen']

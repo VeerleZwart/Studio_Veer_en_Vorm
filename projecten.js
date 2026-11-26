@@ -335,7 +335,7 @@ const PROJECTEN = {
    ============================================================ */
 (function () {
   const map = './Afbeeldingen/projecten/';
-  const pad = (b) => (b.includes('/') ? b : map + b);
+  const pad = (b) => (b.startsWith('./') || b.startsWith('http') ? b : map + b);
   const sleutels = Object.keys(PROJECTEN);
   const rustig = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 

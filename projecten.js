@@ -27,7 +27,7 @@ const PROJECTEN = {
       ['Vak', 'Graphic Design 1 · opdracht 2'],
       ['Opdrachtgever', 'Graphic Matters (Breda)'],
       ['Periode', 'oktober 2026'],
-      ['Formaat', 'A0-poster, staand'],
+      ['Oplevering', 'A0-poster, staand'],
       ['Score', '14,2 / 20']
     ],
     tekst: [
@@ -64,8 +64,9 @@ const PROJECTEN = {
     meta: [
       ['Opleiding', 'CrossMedia Design · Artevelde Hogeschool'],
       ['Vak', 'Graphic Design 1 · opdracht 1'],
+      ['Opdrachtgever', 'Artevelde Hogeschool'],
       ['Periode', 'september – oktober 2026'],
-      ['Formaat', 'A3-collage, knip- en plakwerk'],
+      ['Oplevering', 'A3-collage, knip- en plakwerk'],
       ['Score', '14,2 / 20']
     ],
     tekst: [
@@ -95,8 +96,10 @@ const PROJECTEN = {
     meta: [
       ['Opleiding', 'Communicatie · Avans Hogeschool'],
       ['Opdrachtgever', 'Stichting TURF (Breda)'],
-      ['Project', 'Gouden Kans'],
-      ['Periode', 'juli 2026']
+      ['Bureau', 'Individueel project'],
+      ['Periode', 'juli 2026'],
+      ['Oplevering', 'PDF-rapport, 20 pagina’s'],
+      ['Score', '8,0 / 10']
     ],
     tekst: [
       ['De opdracht', 'TURF is een stadsbreed festival in Breda dat elektronische muziek, technologie en kunst samenbrengt. Het wil uitgroeien tot hét jaarlijkse evenement van Breda, maar weet nog weinig over een grote groep vlak om de hoek: de bijna 18.000 Nederlandstalige studenten in Breda. Mijn onderzoeksvraag: hoe kan TURF deze studenten het beste bereiken en enthousiasmeren?'],
@@ -130,6 +133,8 @@ const PROJECTEN = {
       ['Opleiding', 'Communicatie · Avans Hogeschool'],
       ['Opdrachtgever', 'Tilburg University · Health & Lifestyle Program'],
       ['Bureau', 'LOOP'],
+      ['Periode', 'februari - juni 2026'],
+      ['Oplevering', 'PDF-rapport, 20 pagina’s'],
       ['Score', '8,0 / 10']
     ],
     tekst: [
@@ -176,12 +181,14 @@ const PROJECTEN = {
       ['Opleiding', 'Communicatie · Avans Hogeschool'],
       ['Opdrachtgever', 'Lorenz Organiseren B.V.'],
       ['Bureau', 'Praatstof'],
-      ['Score', 'n.v.t.']
+      ['Periode', 'oktober 2025'],
+      ['Oplevering', 'PDF-rapport, 20 pagina’s'],
+      ['Score', 'NB (APA)']
     ],
     tekst: [
       ['De opdracht', 'Lorenz lanceert in maart 2026 Netwerkkracht Start, een platform dat professionals uit de zorg, het sociaal domein en het veiligheidsdomein met elkaar verbindt. De vraag aan ons: hoe zorg je dat drukbezette professionals zich al voor de lancering aanmelden?'],
-['Wat ik deed', 'In een team van vier deden we deskresearch met onder andere een DESTEP-analyse, het Vijfkrachtenmodel en een SWOT-analyse, en fieldresearch met een enquête en interviews. De grootste drempel bleek de vraag “Wat levert dit mij op, en kost het mij extra tijd?”.'],
-['Het resultaat', 'Een MarCom-advies met het concept “Een netwerk om op te bouwen” en de belofte dat het platform samenwerken simpeler en sneller maakt. Met een LinkedIn-campagne met korte video, een drieluikfolder en een stand op de Dag van de ZZP’er willen we 1500 professionals bereiken en 45 aanmeldingen voor de gratis proefmaand halen.']
+      ['Wat ik deed', 'In een team van vier deden we deskresearch met onder andere een DESTEP-analyse, het Vijfkrachtenmodel en een SWOT-analyse, en fieldresearch met een enquête en interviews. De grootste drempel bleek de vraag “Wat levert dit mij op, en kost het mij extra tijd?”.'],
+      ['Het resultaat', 'Een MarCom-advies met het concept “Een netwerk om op te bouwen” en de belofte dat het platform samenwerken simpeler en sneller maakt. Met een LinkedIn-campagne met korte video, een drieluikfolder en een stand op de Dag van de ZZP’er willen we 1500 professionals bereiken en 45 aanmeldingen voor de gratis proefmaand halen.']
     ],
     tags: ['MarCom', 'LinkedIn campagne', 'Conceptontwikkeling'],
     fotos: [
@@ -217,11 +224,12 @@ const PROJECTEN = {
     ondertitel: 'Adviesrapport · Wijkraad Heusdenhout',
     meta: [
       ['Opleiding', 'Communicatie · Avans Hogeschool'],
-      ['Bureau', 'Praatstof'],
       ['Opdrachtgever', 'Wijkraad Heusdenhout'],
+      ['Bureau', 'Praatstof'],
       ['Periode', 'september - oktober 2025'],
-      ['Formaat', 'Dossier, website, poster en wijkkrant'],
+      ['Oplevering', 'Dossier, website, poster en wijkkrant gepresenteerd tijdens Show & Tell'],
       ['Score', '7,6 / 10']
+      ['Award', 'Firestarter Award 2025 (Avans Hogeschool) - Meest veelbelovende communicatiebureau van het jaar']
     ],
     tekst: [
       ['De opdracht', 'De wijkraad van Heusdenhout in Breda had te weinig leden. Na het vertrek van de voorzitter haakten veel vrijwilligers af en wisten bewoners vaak niet eens dat de wijkraad bestond. Met ons communicatiebureau Praatstof zochten we uit: wat houdt bewoners van 45 jaar en ouder tegen om mee te doen?'],
@@ -258,7 +266,10 @@ const PROJECTEN = {
     ondertitel: 'Huisstijl · Communicatiebureau Praatstof',
     meta: [
       ['Opleiding', 'Communicatie · Avans Hogeschool'],
+      ['Opdrachtgever', 'Avans Hogeschool'],
       ['Bureau', 'Praatstof (eigen studentenbureau)'],
+      ['Periode', 'september – oktober 2025'],
+      ['Oplevering', 'Huisstijlhandboek, logo-animatie, typografie en toepassingen'],
       ['Score', '8,0 / 10'],
     ],
     tekst: [
@@ -304,9 +315,9 @@ const PROJECTEN = {
     meta: [
       ['Opleiding', 'Communicatie · Avans Hogeschool'],
       ['Opdrachtgever', 'Avans Hogeschool'],
-      ['Bureau', 'Veerle Zwart (eigen werk)'],
-      ['Score', '9,0 / 10'],
-      ['Periode', 'september 2025 – juni 2026']
+      ['Bureau', 'Individueel project'],
+      ['Periode', 'september 2025 – juni 2026'],
+      ['Score', '9,0 / 10']
     ],
     tekst: [
       ['Over dit project', 'Een jaar lang onderzocht ik wie ik ben als (toekomstig) communicatieprofessional. In dit portfolio staan mijn reflecties, onderzoeken en gesprekken met het werkveld bij elkaar.'],

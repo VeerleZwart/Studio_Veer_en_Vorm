@@ -298,6 +298,36 @@ nav.links a.active::after{ transform:scaleX(1); }
   content:""; width:7px; height:7px; border-radius:50%;
   background:var(--zalmroze); margin:0 20px;
 }
+/* ---------- Software-strook (programma's) ---------- */
+.software-band{
+  overflow:hidden;
+  margin:0 -6vw;
+  padding:8px 0;
+  -webkit-mask-image:linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);
+          mask-image:linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);
+}
+.software-rij{
+  display:flex; gap:18px; width:max-content;
+  padding-right:18px;
+  animation:software 28s linear infinite;
+}
+.software-band:hover .software-rij{ animation-play-state:paused; }
+.software-item{
+  display:flex; align-items:center; gap:14px;
+  background:var(--paper);
+  border:1.5px solid rgba(62, 74, 43, .14);
+  border-radius:var(--radius);
+  padding:14px 24px 14px 14px;
+  transition:transform .3s var(--zacht), border-color .3s, box-shadow .3s;
+}
+.software-item:hover{
+  transform:translateY(-4px);
+  border-color:var(--zalmroze);
+  box-shadow:0 10px 24px rgba(62, 74, 43, .12);
+}
+.software-item svg{ width:44px; height:44px; flex:none; }
+.software-item span{ font-weight:600; font-size:16px; color:var(--olive-dark); white-space:nowrap; }
+@keyframes software{ from{ transform:translateX(-50%); } to{ transform:translateX(0); } }
 
 
 /* ================================================================
@@ -867,8 +897,14 @@ body.modal-open{ overflow:hidden; }   /* pagina scrolt niet mee */
   .pm-inhoud{ grid-template-columns:1fr; max-height:calc(100vh - 16px); }
   .pm-info{ padding:24px 20px 28px; }
   .pm-meta{ grid-template-columns:1fr; }
-}
 
+   /* --- Software-strook --- */
+  .software-band{ margin:0 -5vw; }
+  .software-item{ padding:10px 18px 10px 10px; gap:10px; }
+  .software-item svg{ width:36px; height:36px; }
+  .software-item span{ font-size:14px; }
+}
+ 
 
 /* ================================================================
    == 16. Minder beweging
@@ -881,4 +917,6 @@ body.modal-open{ overflow:hidden; }   /* pagina scrolt niet mee */
   }
   .js .reveal{ opacity:1; transform:none; }
   .band-rij{ animation:none; }
+  .software-rij{ flex-wrap:wrap; width:auto; justify-content:center; padding:0 6vw; }
+  .software-band{ -webkit-mask-image:none; mask-image:none; }
 }

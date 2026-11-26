@@ -82,6 +82,41 @@ const PROJECTEN = {
   }
     ,
 
+      'turf': {
+    categorie: 'Propedeuse Communicatie',
+    jaar: '2026',
+    uitgelicht: true,
+    kaartTitel: 'Doelgroepanalyse TURF',
+    kaartTekst: 'Onderzoek voor festival TURF in Breda: hoe bereik en enthousiasmeer je studenten? Met deskresearch, zes interviews, een persona en een customer journey.',
+    kaartFoto: 'turf-cover.jpg',
+    fotoPositie: 'center 70%',
+    titel: 'Omgevings- en doelgroepanalyse TURF',
+    ondertitel: 'Onderzoeksrapport · Stichting TURF',
+    meta: [
+      ['Opleiding', 'Communicatie · Avans Hogeschool'],
+      ['Opdrachtgever', 'Stichting TURF (Breda)'],
+      ['Project', 'Gouden Kans'],
+      ['Periode', 'juli 2026']
+    ],
+    tekst: [
+      ['De opdracht', 'TURF is een stadsbreed festival in Breda dat elektronische muziek, technologie en kunst samenbrengt. Het wil uitgroeien tot hét jaarlijkse evenement van Breda, maar weet nog weinig over een grote groep vlak om de hoek: de bijna 18.000 Nederlandstalige studenten in Breda. Mijn onderzoeksvraag: hoe kan TURF deze studenten het beste bereiken en enthousiasmeren?'],
+      ['Mijn aanpak', 'Met deskresearch bracht ik de omgeving in kaart: een DESTEP, het vijfkrachtenmodel van Porter, een SWOT, een positioneringsmatrix en een web- en keywordanalyse. Daarnaast hield ik zes interviews met studenten, gespreid op opleiding, leeftijd en uitgaanstype. Die vertaalde ik naar persona Lara en een customer journey.'],
+      ['Wat ik ontdekte', 'Vijf van de zes studenten kenden TURF niet. De meesten gaan alleen als hun vrienden meegaan, en prijs, locatie en line-up moeten vooraf duidelijk zijn. TURF heeft in zijn eigen niche geen directe concurrent, maar het woord ‘student’ komt nergens op de homepage voor.'],
+      ['Conclusie', 'TURF bereikt studenten het best via Instagram en TikTok, gericht op vriendengroepen in plaats van losse personen, met heldere praktische informatie en het toegankelijke feestgedeelte als ingang.']
+    ],
+    tags: ['Onderzoek', 'Doelgroepanalyse', 'Persona', 'Customer journey'],
+    fotos: [
+      ['turf-cover.jpg', 'Voorkant van het onderzoeksrapport'],
+      ['turf-persona.jpg', 'Persona Lara, gebaseerd op zes interviews'],
+      ['turf-customer-journey.jpg', 'Customer journey: van bewustwording tot loyaliteit'],
+      ['turf-positioneringsmatrix.jpg', 'Positioneringsmatrix: TURF tegenover het Bredase uitgaansaanbod']
+    ],
+    bestanden: [
+      ['Bekijk rapport (PDF)', 'bestanden/Doelgroepanalyse-TURF-Veerle-Zwart.pdf']
+    ]
+  },
+
+
 'workwalk': {
     categorie: 'Propedeuse Communicatie',
     jaar: '2026',

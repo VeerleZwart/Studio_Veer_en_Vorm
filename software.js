@@ -13,6 +13,7 @@
     { naam:'InDesign',           logo:'logo-indesign.webp' },
     { naam:'Adobe Express',      logo:'logo-adobe-express.webp' },
     { naam:'Creative Cloud',     logo:'logo-adobe-creative-studio.webp' },
+    { naam:'Figma',              logo:'logo-figma.avif' },
     { naam:'Canva',              logo:'logo-canva.png' },
     { naam:'Affinity',           logo:'logo-affinity.webp' },
     { naam:'Visual Studio Code', logo:'logo-visual-studio-code.webp' }

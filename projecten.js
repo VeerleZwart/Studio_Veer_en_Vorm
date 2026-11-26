@@ -421,14 +421,7 @@ const PROJECTEN = {
 <dialog id="project-modal" class="project-modal" aria-labelledby="pm-titel">
   <button class="pm-sluit" type="button" aria-label="Sluiten">&times;</button>
   <div class="pm-inhoud">
-    <div class="pm-galerij">
-      <div class="pm-hoofdfoto">
-        <button class="pm-pijl pm-vorige" type="button" aria-label="Vorige foto">&#8249;</button>
-        <button class="pm-pijl pm-volgende" type="button" aria-label="Volgende foto">&#8250;</button>
-      </div>
-      <div class="pm-fotobalk"><span class="pm-onderschrift"></span><span class="pm-teller"></span></div>
-      <div class="pm-thumbs"></div>
-    </div>
+    <div class="pm-galerij"></div>
     <div class="pm-info">
       <p class="pm-ondertitel"></p>
       <h2 class="pm-titel" id="pm-titel"></h2>
@@ -442,25 +435,91 @@ const PROJECTEN = {
       </div>
     </div>
   </div>
+</dialog>
+<dialog id="pm-zoom" class="pm-zoom" aria-label="Foto groot bekijken">
+  <button class="pz-sluit" type="button" aria-label="Sluiten">&times;</button>
+  <button class="pz-pijl pz-vorige" type="button" aria-label="Vorige foto">&#8249;</button>
+  <figure class="pz-foto">
+    <figcaption><span class="pz-onderschrift"></span><span class="pz-teller"></span></figcaption>
+  </figure>
+  <button class="pz-pijl pz-volgende" type="button" aria-label="Volgende foto">&#8250;</button>
 </dialog>`);
 
   const dlg = document.getElementById('project-modal');
   const el = (sel) => dlg.querySelector(sel);
-  el('.pm-hoofdfoto').prepend(document.createElement('img'));
+    const zoom = document.getElementById('pm-zoom');
+  const zEl = (sel) => zoom.querySelector(sel);
+  const zoomFoto = document.createElement('img');
+  zEl('.pz-foto').prepend(zoomFoto);
   let fotos = [], huidige = 0, lijst = [], open_ = '';
 
+  // Alle foto's onder elkaar: groot, dan twee naast elkaar, dan weer groot, ...
+  // Twee naast elkaar worden even hoog; de breedte past zich aan de vorm van de foto aan.
+  function galerijBouwen() {
+    const galerij = el('.pm-galerij');
+    galerij.innerHTML = '';
+    let rij = null;
+    fotos.forEach(([bestand, onderschrift], n) => {
+      const alleenOver = n === fotos.length - 1 && n % 3 === 1;   // laatste foto zonder buurfoto
+      if (n % 3 !== 2) {                                          // nieuwe rij beginnen
+        rij = document.createElement('div');
+        rij.className = 'pm-rij';
+        galerij.append(rij);
+      }
+      const tegel = document.createElement('button');
+      tegel.type = 'button';
+      tegel.className = 'pm-tegel';
+      tegel.setAttribute('aria-label', 'Foto ' + (n + 1) + ' groot bekijken: ' + onderschrift);
+      const f = foto(bestand, onderschrift);
+      f.loading = 'eager';
+      const verhouding = () => { if (f.naturalWidth) tegel.style.flexGrow = Math.round(f.naturalWidth / f.naturalHeight * 1000); };
+      f.addEventListener('load', verhouding);
+      verhouding();
+      tegel.append(f);
+      const label = document.createElement('span');
+      label.className = 'pm-tegel-tekst';
+      label.textContent = onderschrift;
+      tegel.append(label);
+      tegel.addEventListener('click', () => zoomOpen(n));
+      rij.append(tegel);
+      if (n % 3 === 0 || alleenOver) rij = null;                  // grote foto = rij alleen
+    });
+  }
+
+  // De foto schermvullend (lightbox)
   function toonFoto(i) {
     if (!fotos.length) return;
     huidige = (i + fotos.length) % fotos.length;
     const [bestand, onderschrift] = fotos[huidige];
-    const img = el('.pm-hoofdfoto img');
-    img.classList.remove('wissel'); void img.offsetWidth; img.classList.add('wissel');
-    img.src = pad(bestand);
-    img.alt = onderschrift;
-    el('.pm-onderschrift').textContent = onderschrift;
-    el('.pm-teller').textContent = (huidige + 1) + ' / ' + fotos.length;
-    dlg.querySelectorAll('.pm-thumbs button').forEach((b, n) => b.classList.toggle('actief', n === huidige));
+    zoomFoto.classList.remove('wissel'); void zoomFoto.offsetWidth; zoomFoto.classList.add('wissel');
+    zoomFoto.src = pad(bestand);
+    zoomFoto.alt = onderschrift;
+    zEl('.pz-onderschrift').textContent = onderschrift;
+    zEl('.pz-teller').textContent = (huidige + 1) + ' / ' + fotos.length;
   }
+  function zoomOpen(n) {
+    zoom.querySelectorAll('.pz-pijl').forEach(b => b.hidden = fotos.length < 2);
+    toonFoto(n);
+    zoom.showModal();
+  }
+  zEl('.pz-sluit').addEventListener('click', () => zoom.close());
+  zEl('.pz-vorige').addEventListener('click', () => toonFoto(huidige - 1));
+  zEl('.pz-volgende').addEventListener('click', () => toonFoto(huidige + 1));
+  zoom.addEventListener('click', (e) => {            // klik naast de foto = sluiten
+    if (e.target === zoom || e.target.classList.contains('pz-foto')) zoom.close();
+  });
+  zoom.addEventListener('keydown', (e) => {
+    if (e.key === 'ArrowLeft') toonFoto(huidige - 1);
+    if (e.key === 'ArrowRight') toonFoto(huidige + 1);
+  });
+  let veegStart = null;                              // vegen op telefoon
+  zoom.addEventListener('touchstart', (e) => { veegStart = e.touches[0].clientX; }, { passive: true });
+  zoom.addEventListener('touchend', (e) => {
+    if (veegStart === null) return;
+    const verschil = e.changedTouches[0].clientX - veegStart;
+    if (Math.abs(verschil) > 50) toonFoto(huidige + (verschil < 0 ? 1 : -1));
+    veegStart = null;
+  });
 
   function openProject(sleutel) {
     const p = PROJECTEN[sleutel];
@@ -479,15 +538,7 @@ const PROJECTEN = {
 
     const galerij = el('.pm-galerij');
     galerij.hidden = !fotos.length;
-    if (fotos.length) {
-      el('.pm-thumbs').innerHTML = fotos.map(([b, o], n) =>
-        `<button type="button" aria-label="Foto ${n + 1}: ${o}"></button>`).join('');
-      dlg.querySelectorAll('.pm-thumbs button').forEach((b, n) => b.append(foto(fotos[n][0])));
-      dlg.querySelectorAll('.pm-thumbs button').forEach((b, n) => b.addEventListener('click', () => toonFoto(n)));
-      dlg.querySelectorAll('.pm-pijl').forEach(b => b.hidden = fotos.length < 2);
-      el('.pm-thumbs').hidden = fotos.length < 2;
-      toonFoto(0);
-    }
+    if (fotos.length) galerijBouwen();
     el('.pm-bladeren').hidden = lijst.length < 2;
     if (!dlg.open) dlg.showModal();
     document.body.classList.add('modal-open');
@@ -497,13 +548,7 @@ const PROJECTEN = {
 
   dlg.addEventListener('close', () => document.body.classList.remove('modal-open'));
   el('.pm-sluit').addEventListener('click', () => dlg.close());
-  el('.pm-vorige').addEventListener('click', () => toonFoto(huidige - 1));
-  el('.pm-volgende').addEventListener('click', () => toonFoto(huidige + 1));
   dlg.addEventListener('click', (e) => { if (e.target === dlg) dlg.close(); });
-  dlg.addEventListener('keydown', (e) => {
-    if (e.key === 'ArrowLeft') toonFoto(huidige - 1);
-    if (e.key === 'ArrowRight') toonFoto(huidige + 1);
-  });
   dlg.querySelectorAll('.pm-ander').forEach(b => b.addEventListener('click', () => {
     const i = lijst.indexOf(open_);
     openProject(lijst[(i + Number(b.dataset.richting) + lijst.length) % lijst.length]);

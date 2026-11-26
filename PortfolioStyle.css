@@ -766,41 +766,85 @@ body.modal-open{ overflow:hidden; }   /* pagina scrolt niet mee */
 }
 .pm-sluit:hover{ background:var(--olive, #6E7B48); transform:rotate(90deg); }
 
-/* --- Fotogalerij links --- */
-.pm-galerij{ background:var(--olive-dark, #4B5730); padding:20px; display:flex; flex-direction:column; gap:12px; }
+/* --- Fotogalerij links: alle foto's onder elkaar --- */
+.pm-galerij{
+  background:var(--olive-dark, #4B5730); padding:14px;
+  display:flex; flex-direction:column; gap:10px;
+}
 .pm-galerij[hidden]{ display:none; }
 .pm-galerij[hidden] + .pm-info{ grid-column:1 / -1; max-width:720px; }
-.pm-hoofdfoto{
-  position:relative; border-radius:12px; overflow:hidden;
-  background:rgba(0,0,0,.2); aspect-ratio:4/3;
-  display:flex; align-items:center; justify-content:center;
+/* een rij: 1 grote foto, of 2 foto's die even hoog zijn */
+.pm-rij{ display:flex; gap:10px; align-items:flex-start; }
+.pm-tegel{
+  position:relative; display:block; padding:0; border:none; cursor:zoom-in;
+  border-radius:10px; overflow:hidden; background:rgba(0,0,0,.2);
+  flex:1 1 0; min-width:0;          /* breedte volgt de vorm van de foto (via projecten.js) */
 }
-.pm-hoofdfoto img{ width:100%; height:100%; object-fit:contain; display:block; }
-.pm-hoofdfoto img.wissel{ animation:vervaag .45s ease; }
-/* pijltjes op de foto */
-.pm-pijl{
-  position:absolute; top:50%; transform:translateY(-50%);
-  width:44px; height:44px; border-radius:50%; border:none; cursor:pointer;
+.pm-tegel img{
+  width:100%; height:auto; display:block;
+  transition:transform .6s var(--zacht);
+}
+.pm-tegel:hover img{ transform:scale(1.04); }
+/* onderschrift + vergrootglas-rondje, verschijnen bij hover */
+.pm-tegel-tekst{
+  position:absolute; left:0; right:0; bottom:0; padding:28px 14px 12px;
+  background:linear-gradient(transparent, rgba(30,36,22,.75));
+  color:var(--paper, #FDFBF5); font-family:inherit; font-size:12px; text-align:left;
+  opacity:0; transform:translateY(8px); transition:opacity .3s, transform .3s var(--zacht);
+}
+.pm-tegel::after{
+  content:'+'; position:absolute; top:10px; right:10px;
+  width:34px; height:34px; border-radius:50%;
+  background:var(--zalmroze); color:var(--olive-dark); font-size:22px; line-height:34px; text-align:center;
+  opacity:0; transform:scale(.7); transition:opacity .3s, transform .3s var(--zacht);
+}
+.pm-tegel:hover .pm-tegel-tekst, .pm-tegel:focus-visible .pm-tegel-tekst{ opacity:1; transform:none; }
+.pm-tegel:hover::after, .pm-tegel:focus-visible::after{ opacity:1; transform:none; }
+
+/* --- Foto schermvullend (lightbox) --- */
+.pm-zoom{
+  width:100vw; height:100vh; max-width:none; max-height:none;
+  margin:0; padding:0; border:none; overflow:hidden;
+  background:rgba(30,36,22,.96); color:var(--paper, #FDFBF5);
+}
+.pm-zoom[open]{ display:flex; align-items:center; justify-content:center; animation:vervaag .3s ease; }
+.pm-zoom::backdrop{ background:transparent; }
+.pz-foto{
+  margin:0; width:100%; height:100%; padding:24px 90px 20px;
+  display:flex; flex-direction:column; align-items:center; justify-content:center; gap:14px;
+}
+.pz-foto img{
+  max-width:100%; max-height:calc(100vh - 100px); object-fit:contain; display:block;
+  border-radius:6px; box-shadow:0 20px 60px rgba(0,0,0,.4);
+}
+.pz-foto img.wissel{ animation:vervaag .35s ease; }
+.pz-foto figcaption{ display:flex; gap:18px; font-size:14px; text-align:center; }
+.pz-teller{ opacity:.65; white-space:nowrap; }
+.pz-sluit, .pz-pijl{
+  position:absolute; z-index:2; border:none; border-radius:50%; cursor:pointer;
+  display:flex; align-items:center; justify-content:center; line-height:1;
   background:rgba(253,251,245,.92); color:var(--olive-dark, #4B5730);
-  font-size:30px; line-height:1; display:flex; align-items:center; justify-content:center;
-  transition:background .2s, transform .25s var(--zacht);
+  transition:background .2s, transform .3s var(--zacht);
 }
-.pm-pijl:hover{ background:var(--zalmroze); transform:translateY(-50%) scale(1.08); }
-.pm-vorige{ left:12px; }
-.pm-volgende{ right:12px; }
-.pm-pijl[hidden]{ display:none; }
-.pm-fotobalk{ display:flex; justify-content:space-between; gap:12px; color:var(--cream, #F7F2E7); font-size:13px; }
-.pm-teller{ opacity:.75; white-space:nowrap; }
-/* kleine fotootjes */
-.pm-thumbs{ display:grid; grid-template-columns:repeat(auto-fill, minmax(64px, 1fr)); gap:8px; }
-.pm-thumbs[hidden]{ display:none; }
-.pm-thumbs button{
-  aspect-ratio:1; border-radius:8px; overflow:hidden; padding:0; cursor:pointer;
-  border:2px solid transparent; background:none; opacity:.6; transition:opacity .2s;
+.pz-sluit{ top:18px; right:18px; width:46px; height:46px; font-size:28px; }
+.pz-sluit:hover{ background:var(--zalmroze); transform:rotate(90deg); }
+.pz-pijl{ top:50%; width:52px; height:52px; font-size:34px; transform:translateY(-50%); }
+.pz-pijl:hover{ background:var(--zalmroze); transform:translateY(-50%) scale(1.08); }
+.pz-vorige{ left:20px; }
+.pz-volgende{ right:20px; }
+.pz-pijl[hidden]{ display:none; }
+
+/* telefoon: foto zo groot mogelijk, pijltjes kleiner */
+@media (max-width:860px){
+  .pm-galerij{ padding:8px; gap:8px; }
+  .pz-foto{ padding:70px 10px 16px; }
+  .pz-foto img{ max-height:calc(100vh - 140px); }
+  .pz-foto figcaption{ font-size:13px; padding:0 50px; flex-direction:column; gap:4px; }
+  .pz-pijl{ width:40px; height:40px; font-size:28px; top:auto; bottom:14px; transform:none; }
+  .pz-pijl:hover{ transform:scale(1.08); }
+  .pz-vorige{ left:10px; }
+  .pz-volgende{ right:10px; }
 }
-.pm-thumbs button:hover{ opacity:1; }
-.pm-thumbs button.actief{ opacity:1; border-color:var(--zalmroze); }
-.pm-thumbs img{ width:100%; height:100%; object-fit:cover; display:block; }
 
 /* --- Tekst rechts --- */
 .pm-info{ padding:40px 36px 36px; display:flex; flex-direction:column; gap:16px; }

@@ -327,7 +327,7 @@ nav.links a.active::after{ transform:scaleX(1); }
 }
 .software-item img{ width:44px; height:44px; flex:none; object-fit:contain; border-radius:10px; }
 .software-item span{ font-weight:600; font-size:16px; color:var(--olive-dark); white-space:nowrap; }
-@keyframes software{ from{ transform:translateX(-50%); } to{ transform:translateX(0); } }
+@keyframes software{ to{ transform:translateX(-50%); } }
 
 
 /* ================================================================

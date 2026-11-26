@@ -325,7 +325,7 @@ nav.links a.active::after{ transform:scaleX(1); }
   border-color:var(--zalmroze);
   box-shadow:0 10px 24px rgba(62, 74, 43, .12);
 }
-.software-item svg{ width:44px; height:44px; flex:none; }
+.software-item img{ width:44px; height:44px; flex:none; object-fit:contain; border-radius:10px; }
 .software-item span{ font-weight:600; font-size:16px; color:var(--olive-dark); white-space:nowrap; }
 @keyframes software{ from{ transform:translateX(-50%); } to{ transform:translateX(0); } }
 
@@ -901,7 +901,7 @@ body.modal-open{ overflow:hidden; }   /* pagina scrolt niet mee */
    /* --- Software-strook --- */
   .software-band{ margin:0 -5vw; }
   .software-item{ padding:10px 18px 10px 10px; gap:10px; }
-  .software-item svg{ width:36px; height:36px; }
+  .software-item img{ width:36px; height:36px; }
   .software-item span{ font-size:14px; }
 }
  
